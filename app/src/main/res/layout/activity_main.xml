@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <LinearLayout
+      android:background="@drawable/blue_background_screen1"
+      android:layout_width="match_parent"
+      android:layout_height="270dp"
+      android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <ImageView
+              android:layout_marginStart="20dp"
+              android:layout_marginTop="20dp"
+              android:tint="@color/white"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/ic_baseline_clear_all_24"
+              android:layout_marginLeft="20dp">
+          </ImageView>
+
+          <androidx.cardview.widget.CardView
+              android:layout_marginLeft="250dp"
+              android:layout_marginTop="20dp"
+              app:cardCornerRadius="40dp"
+              app:cardElevation="8dp"
+              android:id="@+id/card_profile_picture"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:layout_marginStart="250dp">
+
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:contentDescription="@string/app_name"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/profile_picture">
+              </ImageView>
+
+          </androidx.cardview.widget.CardView>
+
+
+
+      </LinearLayout>
+      
+      <TextView
+          android:layout_marginTop="30dp"
+          android:fontFamily="@font/lato_regular"
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          android:textSize="30sp"
+          android:layout_marginStart="20dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Choose a car"
+          android:layout_marginLeft="20dp">
+      </TextView>
+
+      <EditText
+          android:layout_marginTop="15dp"
+          android:layout_marginStart="20dp"
+          android:layout_width="300dp"
+          android:layout_height="60dp"
+          android:background="@drawable/edit_text_background"
+          android:layout_marginLeft="20dp">
+
+         
+      </EditText>
+
+
+
+
+
+  </LinearLayout>
+
+
+</LinearLayout>
