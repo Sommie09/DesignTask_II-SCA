@@ -5,5 +5,9 @@
         android:font="@font/lato_regular">
     </font>
 
+    <font
+        android:font="@font/cabin_medium">
+    </font>
+
 
 </font-family>
