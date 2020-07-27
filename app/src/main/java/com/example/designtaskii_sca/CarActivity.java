@@ -15,6 +15,7 @@ import java.util.List;
 
 public class CarActivity extends AppCompatActivity {
     private ViewPager2 mViewPager2;
+    public static ClickInterface mClickInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class CarActivity extends AppCompatActivity {
                 R.drawable.ic_baseline_star_border_outline,
                 "(3.75k)"));
 
-        mViewPager2.setAdapter(new CarAdapter(cars, this, mViewPager2));
+        mViewPager2.setAdapter(new CarAdapter(cars, this, mClickInterface, mViewPager2 ));
         mViewPager2.setClipToPadding(false);
         mViewPager2.setClipChildren(false);
         mViewPager2.setOffscreenPageLimit(3);
@@ -70,4 +71,5 @@ public class CarActivity extends AppCompatActivity {
 
 
     }
+
 }

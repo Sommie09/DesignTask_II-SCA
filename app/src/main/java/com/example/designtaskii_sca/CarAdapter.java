@@ -18,11 +18,13 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
     List<Car> cars;
     private Context context;
     private ViewPager2 mViewPager2;
+    public static ClickInterface mClickInterface;
 
-    public CarAdapter(List<Car> cars, Context context, ViewPager2 viewPager2) {
+    public CarAdapter(List<Car> cars, Context context, ClickInterface clickInterface, ViewPager2 mViewPager2) {
         this.cars = cars;
         this.context = context;
-        mViewPager2 = viewPager2;
+        this.mClickInterface = clickInterface;
+        this.mViewPager2 = mViewPager2;
     }
 
     @NonNull
@@ -52,7 +54,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
     }
 
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView carName;
         ImageView imageResource;
         TextView carBrand;
@@ -70,6 +72,21 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
             starImage5 = itemView.findViewById(R.id.star5);
             starImage4 = itemView.findViewById(R.id.star4);
             peopleRating = itemView.findViewById(R.id.people_rating);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mClickInterface.onItemClick(getAdapterPosition());
+                }
+            });
+
+
         }
+
+
     }
+
+
+
+
 }

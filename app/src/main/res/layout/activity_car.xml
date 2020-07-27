@@ -11,10 +11,10 @@
     android:layout_height="wrap_content"
     tools:context=".CarActivity">
 
-    <View
+    <LinearLayout
         android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:background="@drawable/blue_background_screen2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,11 +25,11 @@
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="7dp"
-            android:src="@drawable/ic_baseline_navigate_next_24">
+            android:src="@drawable/ic_baseline_keyboard_backspace_24">
         </ImageView>
 
 
-    </View>
+    </LinearLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
@@ -49,11 +49,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Trip Dates"
-        android:textSize="20dp"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/background">
+        app:layout_constraintTop_toBottomOf="@+id/pager">
 
     </TextView>
 
@@ -127,7 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="Pick Up and Return"
-        android:textSize="20dp"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
